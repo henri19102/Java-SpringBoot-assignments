@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Osa01_05.HelloPath" />
+        <module name="Osa01_03.HelloRedirectLoop" />
+        <module name="Osa01_07.HelloRequestParam" />
+        <module name="Osa01_04.HelloWorld" />
+        <module name="Osa01_06.HelloPaths" />
+        <module name="Osa01_02.HelloServer" />
+        <module name="Osa01_09.HelloRequestParams" />
+        <module name="Osa01_08.Greeting" />
+        <module name="Osa01_11.Calculator" />
+        <module name="Osa01_10.Square" />
+        <module name="Osa01_01.HelloBrowser" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Osa01_01.HelloBrowser" target="1.8" />
+      <module name="Osa01_02.HelloServer" target="1.8" />
+      <module name="Osa01_03.HelloRedirectLoop" target="1.8" />
+      <module name="Osa01_04.HelloWorld" target="1.8" />
+      <module name="Osa01_05.HelloPath" target="1.8" />
+      <module name="Osa01_06.HelloPaths" target="1.8" />
+      <module name="Osa01_07.HelloRequestParam" target="1.8" />
+      <module name="Osa01_08.Greeting" target="1.8" />
+      <module name="Osa01_09.HelloRequestParams" target="1.8" />
+      <module name="Osa01_10.Square" target="1.8" />
+      <module name="Osa01_11.Calculator" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

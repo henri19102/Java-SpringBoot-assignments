@@ -1,3 +1,12 @@
 /osa01-Osa01_01.HelloBrowser/target/
 /osa01-Osa01_02.HelloServer/target/
 /osa01-Osa01_03.HelloRedirectLoop/target/
+/osa01-Osa01_04.HelloWorld/target/
+/osa01-Osa01_05.HelloPath/target/
+/osa01-Osa01_07.HelloRequestParam/target/
+/osa01-Osa01_09.HelloRequestParams/target/
+/osa01-Osa01_10.Square/target/
+/osa02-Osa02_01.HelloThymeleaf/target/
+/osa02-Osa02_03.HelloModel/target/
+/osa02-Osa02_04.HelloList/target/
+/osa02-Osa02_05.HelloObjects/target/

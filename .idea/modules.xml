@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_01.HelloBrowser/Osa01_01.HelloBrowser.iml" filepath="$PROJECT_DIR$/osa01-Osa01_01.HelloBrowser/Osa01_01.HelloBrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_02.HelloServer/Osa01_02.HelloServer.iml" filepath="$PROJECT_DIR$/osa01-Osa01_02.HelloServer/Osa01_02.HelloServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_03.HelloRedirectLoop/Osa01_03.HelloRedirectLoop.iml" filepath="$PROJECT_DIR$/osa01-Osa01_03.HelloRedirectLoop/Osa01_03.HelloRedirectLoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_04.HelloWorld/Osa01_04.HelloWorld.iml" filepath="$PROJECT_DIR$/osa01-Osa01_04.HelloWorld/Osa01_04.HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_05.HelloPath/Osa01_05.HelloPath.iml" filepath="$PROJECT_DIR$/osa01-Osa01_05.HelloPath/Osa01_05.HelloPath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_06.HelloPaths/Osa01_06.HelloPaths.iml" filepath="$PROJECT_DIR$/osa01-Osa01_06.HelloPaths/Osa01_06.HelloPaths.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_07.HelloRequestParam/Osa01_07.HelloRequestParam.iml" filepath="$PROJECT_DIR$/osa01-Osa01_07.HelloRequestParam/Osa01_07.HelloRequestParam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_08.Greeting/Osa01_08.Greeting.iml" filepath="$PROJECT_DIR$/osa01-Osa01_08.Greeting/Osa01_08.Greeting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_09.HelloRequestParams/Osa01_09.HelloRequestParams.iml" filepath="$PROJECT_DIR$/osa01-Osa01_09.HelloRequestParams/Osa01_09.HelloRequestParams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_10.Square/Osa01_10.Square.iml" filepath="$PROJECT_DIR$/osa01-Osa01_10.Square/Osa01_10.Square.iml" />
+      <module fileurl="file://$PROJECT_DIR$/osa01-Osa01_11.Calculator/Osa01_11.Calculator.iml" filepath="$PROJECT_DIR$/osa01-Osa01_11.Calculator/Osa01_11.Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mooc-wepa-21.iml" filepath="$PROJECT_DIR$/.idea/mooc-wepa-21.iml" />
+    </modules>
+  </component>
+</project>
