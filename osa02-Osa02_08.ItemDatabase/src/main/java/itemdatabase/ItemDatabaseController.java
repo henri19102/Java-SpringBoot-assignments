@@ -19,4 +19,10 @@ public class ItemDatabaseController {
         return "index";
     }
 
+    @PostMapping("/")
+    public String create(@RequestParam String name) {
+        itemRepository.save(new Item(name));
+        return "redirect:/";
+    }
+
 }
