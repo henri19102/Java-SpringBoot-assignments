@@ -24,10 +24,15 @@ public class HelloPathVariablesController {
         this.items.put("montera", new Item("Montera", "hat"));
     }
 
-
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("item", this.items.get("default"));
+        return "index";
+    }
+
+    @GetMapping("/{hattu}")
+    public String getOne(Model model, @PathVariable String hattu) {
+        model.addAttribute("item", this.items.get(hattu));
         return "index";
     }
 
