@@ -28,8 +28,20 @@ public class AircraftController {
     public String create(@RequestParam String name) {
         Aircraft a = new Aircraft();
         a.setName(name);
-        
+
         aircraftRepository.save(a);
+        return "redirect:/aircrafts";
+    }
+
+    @PostMapping("/aircrafts/{aircraftId}/airports")
+    public String assignAirport(@PathVariable Long aircraftId, @RequestParam Long airportId) {
+        Aircraft aircraft = aircraftRepository.getOne(aircraftId);
+        Airport airport = airportRepository.getOne(airportId);
+        aircraft.setAirport(airport);
+        aircraftRepository.save(aircraft);
+        airport.getAircrafts().add(aircraft);
+        airportRepository.save(airport);
+
         return "redirect:/aircrafts";
     }
 
