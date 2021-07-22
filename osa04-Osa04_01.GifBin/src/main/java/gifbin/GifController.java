@@ -40,18 +40,21 @@ public class GifController {
 
     @GetMapping("/gifs/{id}")
     public String gifs(Model model, @PathVariable Long id) {
-        int count = filesRepo.findAll().size() > 0 ? filesRepo.findAll().size() : 0;
-        FileObject current = null;
-        FileObject next = null;
-        FileObject previous = null;
-
-        if (count > 0) {
-            current = filesRepo.getOne(id);
+        List<FileObject> allGifs = filesRepo.findAll();
+        int size = allGifs.size();
+        FileObject current = filesRepo.getOne(id);
+        int currentIndex = allGifs.indexOf(current);
+        Long next = null;
+        Long previous = null;
+        if (currentIndex + 1 < size) {
+            next = allGifs.get(currentIndex + 1).getId();
+        }
+        if (currentIndex - 1 >= 0) {
+            previous = allGifs.get(currentIndex - 1).getId();
         }
 
-
-        model.addAttribute("count", count);
-        model.addAttribute("current", current);
+        model.addAttribute("count", size);
+        model.addAttribute("current", id);
         model.addAttribute("next", next);
         model.addAttribute("previous", previous);
 
@@ -66,10 +69,11 @@ public class GifController {
 
     @PostMapping("/gifs")
     public String save(@RequestParam("file") MultipartFile file) throws IOException {
-        FileObject fo = new FileObject();
-        fo.setContent(file.getBytes());
-
-        filesRepo.save(fo);
+        if (file.getContentType().equals("image/gif")) {
+            FileObject fo = new FileObject();
+            fo.setContent(file.getBytes());
+            filesRepo.save(fo);
+        }
 
         return "redirect:/gifs";
     }
