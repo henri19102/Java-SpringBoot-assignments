@@ -23,7 +23,8 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @Controller
 public class FileController {
-     @Autowired
+
+    @Autowired
     private FilesRepo filesRepo;
 
     @GetMapping("/")
@@ -37,19 +38,18 @@ public class FileController {
         return "files";
     }
 
+    @PostMapping("/files")
+    public String save(@RequestParam("file") MultipartFile file) throws IOException {
+        FileObject fo = new FileObject();
 
-@PostMapping("/files")
-public String save(@RequestParam("file") MultipartFile file) throws IOException {
-    FileObject fo = new FileObject();
+        fo.setName(file.getOriginalFilename());
+        fo.setContentType(file.getContentType());
+        fo.setContentLength(file.getSize());
+        fo.setContent(file.getBytes());
 
-    fo.setName(file.getOriginalFilename());
-    fo.setMediaType(file.getContentType());
-    fo.setSize(file.getSize());
-    fo.setContent(file.getBytes());
+        filesRepo.save(fo);
 
-    filesRepo.save(fo);
-
-    return "redirect:/files";
-}
+        return "redirect:/files";
+    }
 
 }

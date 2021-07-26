@@ -6,5 +6,9 @@
     </head>
     <body>
         <h1>This page shall automatically contain the profile!</h1>
+
+        <div th:if="${@environment.getActiveProfiles()[0]}">
+            <p th:text="${@environment.getActiveProfiles()[0]}" ></p>
+        </div>
     </body>
 </html>
