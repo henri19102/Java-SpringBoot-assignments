@@ -19,6 +19,9 @@ public class AirportService {
         a.setIdentifier(identifier);
         a.setName(name);
 
-        airportRepository.save(a);
+        if (airportRepository.findByName(name) == null) {
+            airportRepository.save(a);
+
+        }
     }
 }
