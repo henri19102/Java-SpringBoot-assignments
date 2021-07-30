@@ -14,22 +14,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ProfileController {
 
-@Autowired
-private ConfigurableEnvironment env;
+@Value("${spring.profiles.active:}")
+private String activeProfile;
+
+
 
 
 
     @ResponseBody
     @GetMapping("/profile")
     public String getProfile() {
-        env.setActiveProfiles("test");
-
-        return env.getActiveProfiles()[0];
+        return activeProfile ;
     }
 
     @GetMapping("/")
-    public String home() {
-        env.setActiveProfiles("test");
+    public String home(Model mo) {
+     mo.addAttribute("profile", activeProfile);
         return "index";
     }
 

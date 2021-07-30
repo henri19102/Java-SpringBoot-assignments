@@ -1,28 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package filemanager;
 
 import java.io.IOException;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- *
- * @author Henri
- */
 @Controller
-public class FileController {
+public class DefaultController {
 
     @Autowired
     private FilesRepo filesRepo;
@@ -33,9 +26,21 @@ public class FileController {
     }
 
     @GetMapping("/files")
-    public String home(Model model) {
+    public String files(Model model) {
         model.addAttribute("files", filesRepo.findAll());
         return "files";
+    }
+
+    @GetMapping("/files/{id}")
+    public ResponseEntity<byte[]> viewFile(@PathVariable Long id) {
+        FileObject fo = filesRepo.getOne(id);
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.parseMediaType(fo.getContentType()));
+        headers.setContentLength(fo.getContentLength());
+        headers.add("Content-Disposition", "attachment; filename=" + fo.getName());
+
+        return new ResponseEntity<>(fo.getContent(), headers, HttpStatus.CREATED);
     }
 
     @PostMapping("/files")
@@ -51,5 +56,4 @@ public class FileController {
 
         return "redirect:/files";
     }
-
 }
