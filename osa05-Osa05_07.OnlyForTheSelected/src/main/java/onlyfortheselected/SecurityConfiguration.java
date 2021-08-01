@@ -20,9 +20,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        
+            // mahdollistetaan h2-konsolin käyttö
+    http.csrf().disable();
+    http.headers().frameOptions().sameOrigin();
+
         http.authorizeRequests()
-        .anyRequest().authenticated();
+                .antMatchers("/h2-console", "/h2-console/**").permitAll()
+                .antMatchers("/happypath").permitAll()
+                .antMatchers("/adminpath").hasAuthority("ADMIN")
+                .antMatchers("/secretpath").hasAnyAuthority("ADMIN", "USER")
+                .anyRequest().authenticated();
         http.formLogin()
                 .permitAll();
     }
