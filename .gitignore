@@ -55,3 +55,13 @@ osa05-Osa05_06.Reservations/database.mv.db
 osa05-Osa05_07.OnlyForTheSelected/database.mv.db
 osa05-Osa05_07.OnlyForTheSelected/database.trace.db
 osa05-Osa05_08.HiddenFields/database.mv.db
+/osa06-Osa06_01.HelloFragments/target/
+/osa06-Osa06_02.Playlists/target/
+/osa06-Osa06_03.Layout/target/
+/osa06-Osa06_04.Form/target/
+/osa06-Osa06_06.Registration/target/
+osa06-Osa06_01.HelloFragments/database.mv.db
+osa06-Osa06_02.Playlists/database.mv.db
+osa06-Osa06_03.Layout/database.mv.db
+osa06-Osa06_04.Form/database.mv.db
+osa06-Osa06_06.Registration/database.mv.db

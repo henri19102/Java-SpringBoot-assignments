@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="fragments/layout :: head(title='Playlists')" >
         <meta charset="UTF-8" />
-        <title>Playlists</title>
+        <title th:text="${title}" ></title>
     </head>
     <body>
         <header th:replace="fragments/layout :: header">
