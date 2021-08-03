@@ -65,3 +65,7 @@ osa06-Osa06_02.Playlists/database.mv.db
 osa06-Osa06_03.Layout/database.mv.db
 osa06-Osa06_04.Form/database.mv.db
 osa06-Osa06_06.Registration/database.mv.db
+/osa06-Osa06_07.ScoreService/target/
+/osa07-Osa07_01.Calculator/target/
+osa07-Osa07_01.Calculator/database.mv.db
+osa06-Osa06_07.ScoreService/database.mv.db
