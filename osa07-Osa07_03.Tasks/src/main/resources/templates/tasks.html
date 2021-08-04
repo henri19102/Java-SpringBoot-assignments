@@ -8,7 +8,17 @@
 
         <h2>Tasks</h2>
 
-        <!-- TODO: add the ability to list and add tasks (using Javascript!) -->
+        <button onclick="hae()">Hae!</button>
+        
+        <button onclick="laheta()">Lähetä!</button>
+
+        Name<br/>
+        <input  type="text" id="name" /><br/>
+        <p id="received"></p>
+
+
+        <script th:inline="javascript"> var contextRoot = /*[[@{/}]]*/ '';</script>
+        <script th:src="@{/javascript/scripts.js}" defer></script>
 
     </body>
 </html>
