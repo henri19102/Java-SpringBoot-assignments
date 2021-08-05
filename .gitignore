@@ -73,3 +73,5 @@ osa06-Osa06_07.ScoreService/database.mv.db
 /osa07-Osa07_03.Tasks/target/
 osa07-Osa07_02.Books/database.mv.db
 osa07-Osa07_03.Tasks/database.mv.db
+/osa07-Osa07_04.WeatherService/target/
+osa07-Osa07_04.WeatherService/database.mv.db

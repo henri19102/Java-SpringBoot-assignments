@@ -14,22 +14,30 @@ public class LocationController {
     @Autowired
     private LocationRepository locationRepository;
 
+    @Autowired
+    private LocationCache locCache;
 
     @GetMapping("/locations")
     public String list(Model model) {
-model.addAttribute("locations", locationRepository.findAll());
+        model.addAttribute("locations", locCache.all());
         return "locations";
     }
 
     @GetMapping("/locations/{id}")
     public String view(Model model, @PathVariable Long id) {
-model.addAttribute("location", locationRepository.getOne(id));
+        model.addAttribute("location", locCache.findOne(id));
         return "location";
     }
 
     @PostMapping("/locations")
     public String add(@ModelAttribute Location location) {
-        locationRepository.save(location);
+        locCache.saveLocation(location);
         return "redirect:/locations";
+    }
+
+    @GetMapping("/flushcaches")
+    public String flushcaches() {
+        locCache.flushAll();
+        return "locations";
     }
 }
