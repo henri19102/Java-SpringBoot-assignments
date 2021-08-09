@@ -5,6 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,8 +14,10 @@ public class CalculationService {
     @Autowired
     private CalculationRepository calculationRepository;
 
+    @Async
     @Transactional
-public Calculation process(Calculation calc) {
+    public void process(Calculation calc) {
+        
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ex) {
@@ -23,6 +26,6 @@ public Calculation process(Calculation calc) {
 
         calc.setStatus("PROCESSED");
         calc.setCalculationResult(calc.getContent() + ";" + UUID.randomUUID().toString());
-return calculationRepository.save(calc);
+        calculationRepository.save(calc);
     }
 }

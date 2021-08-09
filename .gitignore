@@ -75,3 +75,7 @@ osa07-Osa07_02.Books/database.mv.db
 osa07-Osa07_03.Tasks/database.mv.db
 /osa07-Osa07_04.WeatherService/target/
 osa07-Osa07_04.WeatherService/database.mv.db
+/osa07-Osa07_05.Calculations/target/
+/osa07-Osa07_06.ReactiveWebService/target/
+/osa07-Osa07_06.ReactiveWebService/nbproject/
+osa07-Osa07_05.Calculations/database.mv.db

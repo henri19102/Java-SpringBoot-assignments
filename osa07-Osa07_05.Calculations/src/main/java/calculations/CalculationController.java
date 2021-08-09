@@ -33,8 +33,11 @@ public class CalculationController {
     @PostMapping("/calculations")
     public String create(RedirectAttributes redirectAttributes,
             @ModelAttribute Calculation calculation) {
+        
+        calculation.setStatus("PROCESSING");
+        calculationRepository.save(calculation);
 
-        calculation = calculationService.process(calculation);
+        calculationService.process(calculation);
 
         
         // käytännössä sama kuin 
